@@ -86,4 +86,28 @@ p {
   width: 90%;
   margin-bottom: 20px;
 }
+
+.resolutions {
+  width: 100%;
+}
+
+.item-wrapper {
+  width: 100%;
+  margin: 20px 0px;
+  padding: 10px 10px;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  background-color: #52a1a1;
+}
+
+.item-wrapper .item {
+  color: #fff;
+  font-size: 1.2rem;
+  font-style: normal;
+  margin-top: 0px;
+}
+
+.item-wrapper:hover {
+  background-color: #448a8a;
+}
 /*# sourceMappingURL=home.css.map */

@@ -52,3 +52,23 @@ p {
         margin-bottom: 20px;
     }
 }
+.resolutions {
+    width: 100%;
+}
+
+.item-wrapper {
+    width: 100%;
+    margin: 20px 0px;
+    padding: 10px 10px;
+    transition: 0.2s all ease;
+    background-color: #52a1a1;
+    .item {
+        color: #fff;
+        font-size: 1.2rem;
+        font-style: normal;
+        margin-top: 0px;
+    }
+    &:hover {
+        background-color: #448a8a;
+    }
+}
