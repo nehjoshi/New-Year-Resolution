@@ -1,11 +1,13 @@
 import React from 'react';
-import {Text} from './Text';
-import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from './components/Home';
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Text text="Hello World"  id={1}/>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </Router>
   );
 }
 
