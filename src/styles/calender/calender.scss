@@ -70,3 +70,18 @@ nav {
         }
     }
 }
+.date-wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 50px;
+    width: 95%;
+    margin: 0 auto;
+}
+.datebox-wrapper {
+    width: 120px;
+    height: 120px;
+    border-color:#949494;
+    border-style: solid;
+    border-width: 1px;
+}

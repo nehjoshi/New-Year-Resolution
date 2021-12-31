@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import "../styles/calender/calender.css";
 import { ArrowBack, ArrowLeft, ArrowRight } from '@material-ui/icons';
 import { Link } from 'react-router-dom';
+import DateBox from './DateBox';
 
 const Calender: React.FC = () => {
 
@@ -27,6 +28,11 @@ const Calender: React.FC = () => {
             setMonth(month + 1);
         }
     }
+    const GenerateCalender = () => {
+        const calender = [];
+        return <p>Hey</p>
+        
+    }
 
     return (
         <div className='calender-wrapper'>
@@ -44,6 +50,10 @@ const Calender: React.FC = () => {
                 <div className="month-arrow-wrapper" onClick={handleMonthForward}>
                     <ArrowRight className="month-arrow" />
                 </div>
+            </div>
+            <div className="date-wrapper">
+                {GenerateCalender()}
+
             </div>
         </div>
     )
