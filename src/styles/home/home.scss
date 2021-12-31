@@ -61,7 +61,8 @@ p {
     margin: 20px 0px;
     padding: 10px 10px;
     transition: 0.2s all ease;
-    background-color: #52a1a1;
+    background-color: #FF7F11;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     .item {
         color: #fff;
         font-size: 1.2rem;
@@ -69,6 +70,6 @@ p {
         margin-top: 0px;
     }
     &:hover {
-        background-color: #448a8a;
+        background-color: #e2710e;
     }
 }

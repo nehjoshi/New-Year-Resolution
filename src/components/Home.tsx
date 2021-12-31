@@ -56,7 +56,14 @@ const Home = () => {
                 set(ref(db, `resolutions/res0`), {
                     res: text
                 })
-                    .then(res => console.log("Success"))
+                .then(res => {
+                    setOpen1(false);
+                    setOpenSnackbar(true);
+                    get(dbRef).then(snapshot => {
+                        setResolutions(snapshot.val().resolutions);
+                    })
+
+                })
                     .catch(err => console.log(err));
             }
         })

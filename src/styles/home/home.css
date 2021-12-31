@@ -97,7 +97,9 @@ p {
   padding: 10px 10px;
   -webkit-transition: 0.2s all ease;
   transition: 0.2s all ease;
-  background-color: #52a1a1;
+  background-color: #FF7F11;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .item-wrapper .item {
@@ -108,6 +110,6 @@ p {
 }
 
 .item-wrapper:hover {
-  background-color: #448a8a;
+  background-color: #e2710e;
 }
 /*# sourceMappingURL=home.css.map */
