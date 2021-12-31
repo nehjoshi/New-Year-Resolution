@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+.calender-wrapper {
+  height: 100vh;
+  width: 100%;
+  font-family: Lato;
+}
+
+nav {
+  height: 60px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 100%;
+  background-color: #FF7F11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+nav .back-wrapper {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  cursor: pointer;
+  color: #fff;
+  margin-top: 3px;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+}
+
+nav .back-wrapper:hover {
+  background-color: rgba(56, 56, 56, 0.151);
+}
+
+nav .back-wrapper .back-icon {
+  font-size: 2rem;
+}
+
+.month-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 60px;
+}
+
+.month-wrapper h6 {
+  font-size: 1.2rem;
+  color: #303030;
+  margin: 0px 50px;
+}
+
+.month-wrapper .month-arrow-wrapper {
+  height: 30px;
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  border-radius: 50%;
+}
+
+.month-wrapper .month-arrow-wrapper .month-arrow {
+  font-size: 2rem;
+  color: #303030;
+}
+
+.month-wrapper .month-arrow-wrapper:hover {
+  background-color: rgba(56, 56, 56, 0.151);
+}
+/*# sourceMappingURL=calender.css.map */

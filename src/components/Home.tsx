@@ -6,6 +6,8 @@ import Modal from '@mui/material/Modal';
 import TextField from '@mui/material/TextField';
 import { db } from '../firebase';
 import { ref, set, get } from "firebase/database";
+import { Snackbar } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -17,6 +19,7 @@ const Home = () => {
     const handleClose2 = () => setOpen2(false);
     const [text, setText] = useState("");
     const [resolutions, setResolutions] = useState({});
+    const [openSnackbar, setOpenSnackbar] = useState(false);
 
     useEffect(() => {
         const dbRef = ref(db);
@@ -41,6 +44,7 @@ const Home = () => {
                 })
                     .then(res => {
                         setOpen1(false);
+                        setOpenSnackbar(true);
                         get(dbRef).then(snapshot => {
                             setResolutions(snapshot.val().resolutions);
                         })
@@ -62,7 +66,7 @@ const Home = () => {
     const PrintResolutions = () => {
         const output = []
 
-        const x1 = Object.values(resolutions);
+        const x1: Array<{ res: String }> = Object.values(resolutions);
         for (let i = 0; i < x1.length; i++) {
             output.push(
                 <div className="item-wrapper">
@@ -80,9 +84,12 @@ const Home = () => {
                 <h1>New Year Resolution Generator</h1>
                 <p>For the year 2022</p>
                 <div className='button-container'>
-                    <Button variant="contained" onClick={handleOpen1} className="button" size="large" color="primary" style={{ backgroundColor: '#FF7F11' }}>Create new Resolution</Button>
-                    <Button variant="contained" onClick={handleOpen2} size="large" color="primary" style={{ backgroundColor: '#725AC1' }}>View All Resolutions</Button>
+                    <Button variant="contained" onClick={handleOpen1} className="button" size="large" style={{ backgroundColor: '#FF7F11' }}>Create new Resolution</Button>
+                    <Button variant="contained" onClick={handleOpen2} size="large" style={{ backgroundColor: '#725AC1' }}>View All Resolutions</Button>
                 </div>
+                <Link to='/calender'>
+                    <Button variant="contained" size="large" style={{ marginTop: 20 }}>Go to Calender</Button>
+                </Link>
             </div>
             <Modal open={open1} onClose={handleClose1}>
                 <div className="modal">
@@ -108,6 +115,12 @@ const Home = () => {
                     </div>
                 </div>
             </Modal>
+            <Snackbar
+                open={openSnackbar}
+                onClose={() => setOpenSnackbar(false)}
+                message="Added Resolution Successfully!"
+            />
+
         </div>
     )
 }
