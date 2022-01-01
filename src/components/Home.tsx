@@ -13,7 +13,6 @@ const Home = () => {
 
     const [open1, setOpen1] = useState(false);
     const handleOpen1 = () => setOpen1(true);
-    const handleClose1 = () => setOpen1(false);
     const [open2, setOpen2] = useState(false);
     const handleOpen2 = () => setOpen2(true);
     const handleClose2 = () => setOpen2(false);
@@ -98,7 +97,7 @@ const Home = () => {
                     <Button variant="contained" size="large" style={{ marginTop: 20 }}>Go to Calender</Button>
                 </Link>
             </div>
-            <Modal open={open1} onClose={handleClose1}>
+            <Modal open={open1} onClose={() => setOpen1(false)}>
                 <div className="modal">
                     <h2>Create A New Resolution</h2>
                     <TextField
