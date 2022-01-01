@@ -7,6 +7,7 @@ import Modal from '@mui/material/Modal';
 import { Button } from '@material-ui/core';
 import { db } from '../firebase';
 import { ref, set, get } from "firebase/database";
+import CircularProgress from '@mui/material/CircularProgress';
 
 const Calender: React.FC = () => {
 
@@ -151,7 +152,7 @@ const Calender: React.FC = () => {
                     <ArrowRight className="month-arrow" />
                 </div>
             </div>
-            {!loading &&
+            {loading ? <div style={{display: 'flex', height: '80vh', alignItems: 'center', justifyContent: 'center'}}><CircularProgress /></div> : 
                 <div className="date-wrapper">
                     {GenerateCalender()}
                 </div>
