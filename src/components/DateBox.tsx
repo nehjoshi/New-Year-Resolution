@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import "../styles/calender/calender.css";
 
 interface Props {
@@ -10,10 +10,6 @@ interface Props {
 }
 
 const DateBox: React.FC<Props> = (Props) => {
-
-    useEffect(() => {
-        console.log("hello")
-    })
 
     return (
         <div className="datebox-wrapper" onClick={() => Props.onClick(Props.month, Props.date)} style={{backgroundColor: Props.bgColor}}>
